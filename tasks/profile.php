@@ -1,4 +1,18 @@
-<?php require '../includes/header.php'; ?>
+<?php
+session_start();
+require '../config/db.php';
+
+if (isset($_SESSION['loggedIn']) == false) {
+    header('Location: ../index.php?loginFirst=1');
+    exit;
+}
+
+
+
+
+
+
+require '../includes/header.php'; ?>
 
 <body class="bg-light">
     <!-- User Info Section -->
