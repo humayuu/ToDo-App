@@ -93,7 +93,6 @@ require 'includes/header.php';
                                      Wrong password or email.
                                   </div>';
                         }
-
                         ?>
 
                         <form method="post" action="<?php echo htmlspecialchars(basename(__FILE__)) ?>">

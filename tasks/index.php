@@ -152,7 +152,7 @@ require '../includes/header.php';
                         Menu
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -258,7 +258,9 @@ require '../includes/header.php';
                                                     <input type="hidden" name="__csrf"
                                                         value="<?= htmlspecialchars($_SESSION['__csrf']) ?>">
                                                     <input type="hidden" name="id" value="<?= $task['id'] ?>">
+                                                    <?php if ($task['status'] == 'pending'): ?>
                                                     <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                                    <?php endif; ?>
                                                 </form>
 
                                                 <!-- for Delete Record -->
